@@ -1,1 +1,1 @@
-Positive anything is better than negative nothing
+variables if..else

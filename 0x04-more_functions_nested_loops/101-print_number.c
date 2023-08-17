@@ -1,54 +1,45 @@
 #include "main.h"
-#include "stdio.h"
 
 /**
- * print_number - prints an integer
- * @n: the integer to print
+ * print_number - prints number
+ *
+ * @n: integer to print to character
  */
 void print_number(int n)
 {
 	int i;
-	int max;
-	int minVal = n + 1 == -2147483640 - 7 ? -1 : 0;
-	int rem = n < 0 ? 0 - n + minVal : n;
+	int d = 1;
+	unsigned int x = n;
+	unsigned int y = n;
+	int c = 0;
 
-	max = 1;
-	max *= 100000;
-	max *= 100000;
-
+	if (n == 0)
+	{
+		_putchar('0');
+	}
 	if (n < 0)
+	{
 		_putchar('-');
-
-	for (i = 9; i >= 0; i--)
-	{
-		int power = b10_pow(i);
-
-		if (rem > power - 1 && !(i == 0 && minVal < 0))
-			_putchar((int)((rem / power) % 10) + '0');
-		else if (i == 0 && minVal >= 0)
-			_putchar((int)((rem / power) % 10) + '0');
-		if (i == 0 && minVal < 0)
-			_putchar('8');
+		n = n + 1;
+		n = -n;
+		y = n;
+		x = n;
+		x += 1;
+		y += 1;
 	}
-}
-
-/**
- * b10_pow - Computes the power of 10 to the given index
- * @idx: The index to which 10 is raised to.
- *
- * Return: A power of 10
- */
-int b10_pow(int idx)
-{
-	int i;
-	int result = 1;
-
-	if (idx < 0)
-		return (0);
-
-	for (i = 0; i < idx; i++)
+	while (x != 0)
 	{
-		result *= 10;
+		x = x / 10;
+		c++;
 	}
-	return (result);
+	for (i = 1; i < c; i++)
+	{
+		d *= 10;
+	}
+	for (i = 0; i < c; i++)
+	{
+		_putchar(y / d + '0');
+		y = y % d;
+		d = d / 10;
+	}
 }

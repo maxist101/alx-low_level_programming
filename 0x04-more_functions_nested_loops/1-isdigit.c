@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include "main.h"
 /**
  * _isdigit - determine a digit
  * @c: character to determine

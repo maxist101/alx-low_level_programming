@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
+#include "stdio.h"
+
 /**
  * main - entry point
  * Description: my keygen.
- * Return: 0.
+ * Return: 0
  */
 
 int main(void)
@@ -26,4 +28,6 @@ int main(void)
 	printf("%c\n", (2772 - j));
 	return (0);
 }
+
+
 

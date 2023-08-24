@@ -1,6 +1,6 @@
 #include <stdio.h>
-/*Description: This function modifies the value of a[2]*/
-int main(void)
+#include "main.h"
+int main(void)/*main - Entry point of the program*/
 {
 	int n;
 	int a[5];
@@ -9,7 +9,7 @@ int main(void)
 	a[2] = 1024;
 	p = &n;
 /*
-* write your line of code here...
+* main - Entry point of the program
 * Remember:
 * - you are not allowed to use a
 * - you are not allowed to modify p
